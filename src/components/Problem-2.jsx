@@ -74,10 +74,26 @@ const Problem2 = () => {
         <h4 className="text-center text-uppercase mb-5">Problem-2</h4>
 
         <div className="d-flex justify-content-center gap-3">
-          <button className="btn btn-lg btn-outline-primary" type="button" onClick={handleAllShow}>
+          <button
+            className="btn btn-lg btn-primary"
+            type="button"
+            onClick={handleAllShow}
+            style={{
+              backgroundColor: "#46139f",
+              borderColor: "#46139f"
+            }}
+          >
             All Contacts
           </button>
-          <button className="btn btn-lg btn-outline-warning" type="button" onClick={handleUsOnlyShow}>
+          <button
+            className="btn btn-lg btn-warning"
+            type="button"
+            onClick={handleUsOnlyShow}
+            style={{
+              backgroundColor: "#ff7f50",
+              borderColor: "#ff7f50"
+            }}
+          >
             US Contacts
           </button>
         </div>
@@ -115,13 +131,35 @@ const Problem2 = () => {
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" className="fw-semibold" onClick={handleAllShow}>
+          <Button
+            variant="primary"
+            className="fw-semibold"
+            onClick={handleAllShow}
+            style={{
+              backgroundColor: "#46139f",
+              borderColor: "#46139f"
+            }}
+          >
             All Contacts
           </Button>
-          <Button variant="info" className="fw-semibold" onClick={handleUsOnlyShow}>
+          <Button
+            variant="info"
+            className="fw-semibold"
+            onClick={handleUsOnlyShow}
+            style={{
+              backgroundColor: "#ff7f50",
+              borderColor: "#ff7f50"
+            }}
+          >
             US Contacts
           </Button>
-          <Button variant="outline-danger" onClick={handleClose}>
+          <Button
+            variant="light"
+            onClick={handleClose}
+            style={{
+              borderColor: "#46139f"
+            }}
+          >
             Close
           </Button>
         </Modal.Footer>
