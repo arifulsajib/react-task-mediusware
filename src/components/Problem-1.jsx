@@ -21,8 +21,28 @@ const Problem1 = () => {
     setStatus("");
   };
 
+  //--------sort by status--------------
+  const sortedTasks = [...tasks].sort((a, b) => {
+    const order = {
+      Active: 1,
+      active: 1,
+      Completed: 2,
+      completed: 2
+    };
+
+    const statusA = order[a.status] || 3;
+    const statusB = order[b.status] || 3;
+
+    if (statusA !== statusB) {
+      return statusA - statusB;
+    }
+
+    return a.name.localeCompare(b.name);
+  });
+
   //--------Filter Tasks by status---------
-  const filteredTask = show === "active" ? tasks.filter((task) => task.status.toLowerCase() === "Active".toLowerCase()) : show === "completed" ? tasks.filter((task) => task.status.toLowerCase() === "Completed".toLowerCase()) : tasks;
+  const filteredTask =
+    show === "active" ? sortedTasks.filter((task) => task.status.toLowerCase() === "Active".toLowerCase()) : show === "completed" ? sortedTasks.filter((task) => task.status.toLowerCase() === "Completed".toLowerCase()) : sortedTasks;
 
   return (
     <div className="container">
